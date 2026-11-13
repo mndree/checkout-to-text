@@ -1,0 +1,9 @@
+node_modules/
+.next/
+out/
+build/
+public/pdf.worker.mjs
+*.pdf
+*.tsbuildinfo
+.env*
+!.env.example
