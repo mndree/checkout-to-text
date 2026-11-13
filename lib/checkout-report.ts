@@ -168,10 +168,10 @@ function groupLines(tokens: PositionedText[]): TextLine[] {
       return true;
     })
     .sort(
-    (left, right) =>
-      (left.y0 + left.y1) / 2 - (right.y0 + right.y1) / 2 ||
-      left.x0 - right.x0,
-  );
+      (left, right) =>
+        (left.y0 + left.y1) / 2 - (right.y0 + right.y1) / 2 ||
+        left.x0 - right.x0,
+    );
   const lines: TextLine[] = [];
   const lineTolerance = 0.0075;
 
@@ -634,7 +634,7 @@ function parsePageSections(
       Boolean(activeSection) &&
       (!detectedTitle ||
         normalizeText(detectedTitle).toLowerCase() ===
-          normalizeText(activeSection.title).toLowerCase());
+        normalizeText(activeSection.title).toLowerCase());
     const title = detectedTitle || activeSection?.title || "(Nama bagian tidak terbaca)";
     const items = collectRows(
       lines,
@@ -1001,3 +1001,4 @@ export function formatCheckoutReport(report: CheckoutReport): string {
 
   return output.join("\n").trimEnd();
 }
+// Made by Muhammad Andre Juliansyah
